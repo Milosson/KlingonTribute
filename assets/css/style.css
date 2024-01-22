@@ -16,3 +16,24 @@ button {
     cursor: pointer;
     box-shadow: 10px 5px 15px darkslategray;
 }
+
+#welcomeTxt { 
+    color: rgb(17, 78, 68);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+}
+
+#gameInfo {
+    color:  rgb(17, 78, 68);
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1%;
+    z-index: 1;
+}
