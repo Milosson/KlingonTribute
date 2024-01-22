@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Klingon game page</title>
+</head>
+
+<body>
+
+    <div id="gameImg">GAME PICTURE</div>
+    <div id="container">
+        <button class="choice" onclick="play('rock')">Rock</button>
+        <button class="choice" onclick="('paper')">Paper</button>
+        <button class="choice" onclick="('scissors')">Scissors</button>
+        <button class="choice" onclick="('spock')">Spock</button>
+        <button class="choice" onclick="('lizard')">Lizard</button>
+    </div>
+    <h1 id="result">RESULT</h1>
+    <p id="message">MESSAGE</p>
+
+    <div id="scoreboard">
+        <h2>SCOREBOARD</h2>
+        <p id="playerScore">PSCORE: 0</p>
+        <p id="computerScore">CSCORE: 0</p>
+    </div>
+
+    <div id="gameResultContainer"></div>
+    <div id="theRuleBox"><button id="backToRule" onclick=window.location.href="index.html">BACK</button></div>
+
+    <script src="/assets/scripts/game.js" defer></script>
+</body>
+
+</html>
