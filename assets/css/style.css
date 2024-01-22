@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(61, 99, 112, 0.315);
+    margin: 0;
+    min-height: 100vh;
+}
+
+button {
+    padding: 3%;
+    margin: 3%;
+    background-color: rgb(17, 78, 68);
+    color: white;
+    border: none;
+    border-radius: 5%;
+    cursor: pointer;
+    box-shadow: 10px 5px 15px darkslategray;
+}
