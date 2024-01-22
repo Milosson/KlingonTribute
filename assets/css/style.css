@@ -1,3 +1,4 @@
+/* General body style for somewhat responsiveness withoout m-queries */
 body {
     display: flex;
     flex-direction: column;
@@ -6,6 +7,7 @@ body {
     min-height: 100vh;
 }
 
+/* design for the buttons with some styling for UI-friendliness */
 button {
     padding: 3%;
     margin: 3%;
@@ -17,7 +19,8 @@ button {
     box-shadow: 10px 5px 15px darkslategray;
 }
 
-#welcomeTxt { 
+/* design for welcome text */
+#welcomeTxt {
     color: rgb(17, 78, 68);
     display: flex;
     justify-content: center;
@@ -27,8 +30,10 @@ button {
     width: 100%;
 }
 
-#gameInfo {
-    color:  rgb(17, 78, 68);
+/* design for the game info text */
+#gameInfo,
+#klingonTransTxtBox {
+    color: rgb(17, 78, 68);
     display: flex;
     position: relative;
     flex-direction: column;
@@ -36,4 +41,13 @@ button {
     align-items: center;
     padding: 1%;
     z-index: 1;
+}
+
+/* for the button-divs -StartGame -KlingonTranslatePage -theRuleBox */
+#toTheGameBox,
+#klingonTransBox,
+#theRuleBox {
+  display: flex;
+  position: relative;
+  margin: auto;
 }
