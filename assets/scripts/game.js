@@ -104,12 +104,6 @@ function endGame() {
     // Create the content for the result popup.
     let popupContent = ` <h2>Game Over!</h2>`;
 
-    // Create the content for each round.
-    popupContent += ` <p>Round ${i}: You choose ${emojiMap[userChoice]} - Computer choose ${emojiMap[computerChoice]} - Winner is: ${roundWinner}`;
-
-    // Set the innerHTML of gameResultContainer.
-    gameResultContainer.innerHTML = popupContent;
-
     // Iterate through each round and display details
     for (let i = 1; i <= totalRounds; i++) {
         let roundWinner;
@@ -121,6 +115,11 @@ function endGame() {
             roundWinner = "It's a tie!"
         }
     }
+    // Get choices made in the round
+    let userChoice = choices[i - 1];
+    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+    
 }
 
 
