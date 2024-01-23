@@ -64,17 +64,43 @@ function play(userChoice) {
         // Append the Tie emoji to the result
         result.append(emoji);
 
-        //Player wins based on game rules
+        // Player wins based on game rules
     } else if (userChoice in rules && computerChoice in rules[choices]) {
         result.textContent = "You win!";
         message.textContent = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer chose ${computerChoice} ${emojiMap[computerChoice]}. ${userChoice} ${rules[userChoice][computerChoice]} ${computerChoice}.`;
         playerScore++;
-        //Player lose based on game rules
+        // Player lose based on game rules
     } else {
         result.textContent = "You lose!"
         result.message = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer choose ${computerChoice} ${emojiMap[computerChoice]}. ${computerChoice} ${rules[computerChoice][userChoice]} ${userChoice}.`;
         computerScore++;
     }
 
+    //Increment the total rounds to reach 5 rounds played. If so, end the game; otherwise, uddate the score.
+    totalRounds++;
+    // If 5 rounds have been played, gameOver activates.
+    if (totalRounds === 5) {
+        endGame();
+        // If fewer than 5 rounds have been played, update the scoreboard.
+    } else {
+        updateScoreBoard++;
+    }
+    // function endGame to determine if best of 5 rounds is reached.
+    function endGame() {
+        gameOver = true; //Set the game as over.
 
+        let gameResultContainer = document.getElementById('gameResultContainer');
+
+        // Determine the winner.
+        let winner;
+        if (playerScore > computerScore) {
+            winner = 'Player';
+        } else if (playerScore < computerChoice) {
+            winner = 'Computer';
+        } else {
+            winner = "It's a tie!";
+        }
+    }
 }
+
+
