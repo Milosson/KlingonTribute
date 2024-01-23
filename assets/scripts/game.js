@@ -37,22 +37,31 @@ let message = document.getElementById('message');
 function updateScoreBoard() {
     document.getElementById('playerScore').textContent = "Player: " + playerScore;
     document.getElementById('computerScore').textContent = "Computer: " + computerScore;
-} 
+}
 
 // function play that includes score update.
 function play(userChoice) {
     //Alert for gameOver function.
-if (gameOver) {
-    alert('Game over! Please click "Play Again" to start a new game.');
-    return;
-}
-// Logics for computerChoice.
-let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    if (gameOver) {
+        alert('Game over! Please click "Play Again" to start a new game.');
+        return;
+    }
+    // Logics for computerChoice.
+    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
-// Compare userChoice with computerChoice to determine winner.
-if (userChoice === computerChoice) {
-    result.textContent = "It's a tie!";
-    message.textContent = "You and the computer both chose " + userChoice + ".";
-}
+    // Compare userChoice with computerChoice to check for a tie.
+    if (userChoice === computerChoice) {
+        result.textContent = "It's a tie!";
+        message.textContent = "You and the computer both chose " + userChoice + ".";
+
+        // Create an emoji element to display a Tie if that result appears.
+        let emoji = document.createElement('span');
+        emoji.textContent = '\uD83D\uDC54';
+        emoji.style.fontSize = '24px';
+        emoji.style.marginLeft = '10px';
+        // Append the Tie emoji to the result
+        result.append(emoji);
+
+    }
 
 }
