@@ -88,9 +88,9 @@ button {
 /* */
 #theRuleBox {
     display: flex;
-    margin: auto;
     position: relative;
 }
+
 /* */
 #container {
     display: flex;
