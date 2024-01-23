@@ -85,22 +85,45 @@ function play(userChoice) {
     } else {
         updateScoreBoard++;
     }
-    // function endGame to determine if best of 5 rounds is reached.
-    function endGame() {
-        gameOver = true; //Set the game as over.
+}
+// function endGame to determine if best of 5 rounds is reached.
+function endGame() {
+    gameOver = true; //Set the game as over.
 
-        let gameResultContainer = document.getElementById('gameResultContainer');
+    let gameResultContainer = document.getElementById('gameResultContainer');
 
-        // Determine the winner.
-        let winner;
-        if (playerScore > computerScore) {
-            winner = 'Player';
-        } else if (playerScore < computerChoice) {
-            winner = 'Computer';
+    // Determine the winner.
+    let winner;
+    if (playerScore > computerScore) {
+        winner = 'Player';
+    } else if (playerScore < computerScore) {
+        winner = 'Computer';
+    } else {
+        winner = "It's a tie!";
+    }
+    // Create the content for the result popup.
+    let popupContent = ` <h2>Game Over!</h2>`;
+
+    // Create the content for each round.
+    popupContent += ` <p>Round ${i}: You choose ${emojiMap[userChoice]} - Computer choose ${emojiMap[computerChoice]} - Winner is: ${roundWinner}`;
+
+    // Set the innerHTML of gameResultContainer.
+    gameResultContainer.innerHTML = popupContent;
+
+    // Iterate through each round and display details
+    for (let i = 1; i <= totalRounds; i++) {
+        let roundWinner;
+        if (i <= playerScore) {
+            roundWinner = 'Player';
+        } else if (i <= computerScore) {
+            roundWinner = 'Computer';
         } else {
-            winner = "It's a tie!";
+            roundWinner = "It's a tie!"
         }
     }
 }
+
+
+
 
 
