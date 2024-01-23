@@ -28,3 +28,31 @@ const emojiMap = {
     spock: '\uD83D\uDC7D', // 👽  
     lizard: '\uD83E\uDD8E', // 🦎
 }
+
+// Elements to display result.
+let result = document.getElementById('result');
+let message = document.getElementById('message');
+
+// function updateScoreBoard. 
+function updateScoreBoard() {
+    document.getElementById('playerScore').textContent = "Player: " + playerScore;
+    document.getElementById('computerScore').textContent = "Computer: " + computerScore;
+} 
+
+// function play that includes score update.
+function play(userChoice) {
+    //Alert for gameOver function.
+if (gameOver) {
+    alert('Game over! Please click "Play Again" to start a new game.');
+    return;
+}
+// Logics for computerChoice.
+let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+// Compare userChoice with computerChoice to determine winner.
+if (userChoice === computerChoice) {
+    result.textContent = "It's a tie!";
+    message.textContent = "You and the computer both chose " + userChoice + ".";
+}
+
+}
