@@ -69,6 +69,11 @@ function play(userChoice) {
         result.textContent = "You win!";
         message.textContent = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer chose ${computerChoice} ${emojiMap[computerChoice]}. ${userChoice} ${rules[userChoice][computerChoice]} ${computerChoice}.`;
         playerScore++;
+        //Player lose based on game rules
+    } else {
+        result.textContent = "You lose!"
+        result.message = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer choose ${computerChoice} ${emojiMap[computerChoice]}. ${computerChoice} ${rules[computerChoice][userChoice]} ${userChoice}.`;
+        computerScore++;
     }
 
 
