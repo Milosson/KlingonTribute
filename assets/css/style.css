@@ -60,6 +60,41 @@ button {
     background-position: center;
     background-size: contain;
     position: relative;
+}
 
+/* Game.html styles */
 
+#result,
+#message {
+    text-align: center;
+}
+
+#playerScore,
+#computerScore {
+    font-size: 18px;
+    margin: 5px;
+    color:coral; 
+}
+
+#scoreboard {
+    display: flex;
+    border-radius: 8px;
+    text-align: center;
+    background-color: wheat;
+    text-align: center;
+    flex-direction: column;
+}
+
+#theRuleBox {
+    display: flex;
+    margin: auto;
+    position: relative;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    flex-wrap: wrap;
 }
