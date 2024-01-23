@@ -2,6 +2,7 @@
 let choices = ["rock", "paper", "scissors", "spock", "lizard"];
 
 // Rules for the game - This way of object mapping was inspired by Hackernoon.com and Medium.com!
+// I found this way of object literal to be easier for me rather than switch case.
 let rules = {
     rock: { scissors: "crushes", lizard: "crushes" },
     paper: { rock: "covers", spock: "disapproves" },
@@ -21,6 +22,7 @@ let playerScore = 0;
 let computerScore = 0;
 
 // Map for choices to emojis - This emoji map was inspired by Hackernoon.com! 
+// I prefer to use the unicode for cross-platform compatibility, readability and maintanability. 
 const emojiMap = {
     rock: '\uD83D\uDDFF', // 🗿 
     paper: '\uD83D\uDCC3', // 📃
@@ -62,6 +64,12 @@ function play(userChoice) {
         // Append the Tie emoji to the result
         result.append(emoji);
 
+        //Player wins based on game rules
+    } else if (userChoice in rules && computerChoice in rules[choices]) {
+        result.textContent = "You win!";
+        message.textContent = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer chose ${computerChoice} ${emojiMap[computerChoice]}. ${userChoice} ${rules[userChoice][computerChoice]} ${computerChoice}.`;
+        playerScore++;
     }
+
 
 }
