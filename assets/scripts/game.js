@@ -72,7 +72,7 @@ function play(userChoice) {
         // Player lose based on game rules
     } else {
         result.textContent = "You lose!"
-        result.message = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer choose ${computerChoice} ${emojiMap[computerChoice]}. ${computerChoice} ${rules[computerChoice][userChoice]} ${userChoice}.`;
+        message.textContent = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer choose ${computerChoice} ${emojiMap[computerChoice]}. ${computerChoice} ${rules[computerChoice][userChoice]} ${userChoice}.`;
         computerScore++;
     }
 
@@ -83,7 +83,7 @@ function play(userChoice) {
         endGame();
         // If fewer than 5 rounds have been played, update the scoreboard.
     } else {
-        updateScoreBoard++;
+        updateScoreBoard();
     }
 }
 // function endGame to determine if best of 5 rounds is reached.
@@ -114,13 +114,34 @@ function endGame() {
         } else {
             roundWinner = "It's a tie!"
         }
-    }
-    // Get choices made in the round
+          // Get choices made in the round
     let userChoice = choices[i - 1];
     let computerChoice = choices[Math.floor(Math.random() * choices.length)];
+    }
+   
 
-    
+    // Determine the emoji for roundWinner
+    let roundWinnerEmoji;
+    if (roundWinner === 'Player') {
+        roundWinnerEmoji = emojiMap[userChoice]; // Use the emoji chosen by the player
+    } else if (roundWinner = 'Computer') {
+        roundWinnerEmoji = emojiMap[computerChoice]; // Use the emoji chosen by the computer
+    } else {
+        roundWinnerEmoji = '\uD83D\uDC54'; // Tie-emoji assuming it's a 'tie'
+    }
+
+    // Create the content for each round
+    popupContent += 
+    `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
+    - Computer chose ${emojiMap[computerChoice]} 
+    - Winner is: ${roundWinner} ${roundWinnerEmoji}</p>`;
 }
+
+// Set innerHTML of gameResultContainer
+gameResultContainer.innerHTML = popupContent;
+// Display the gameResultContainer
+gameResultContainer.style.display = 'flex';
+
 
 
 
