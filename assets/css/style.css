@@ -19,7 +19,7 @@ button {
     box-shadow: 10px 5px 15px darkslategray;
 }
 
-/* design for welcome text */
+/* welcome text */
 #welcomeTxt {
     color: rgb(17, 78, 68);
     display: flex;
@@ -30,7 +30,7 @@ button {
     width: 100%;
 }
 
-/* design for the game info text */
+/* game info text for indexhtml and klingonhtml */
 #gameInfo,
 #klingonTransTxtBox {
     color: rgb(17, 78, 68);
@@ -43,11 +43,23 @@ button {
     z-index: 1;
 }
 
-/* for the button-divs -StartGame -KlingonTranslatePage -theRuleBox */
+/* for the button-divs -StartGame -KlingonTranslatePage */
 #toTheGameBox,
-#klingonTransBox,
-#theRuleBox {
-  display: flex;
-  position: relative;
-  margin: auto;
+#klingonTransBox {
+    display: flex;
+    position: relative;
+    margin: auto;
+}
+
+/* Image for gameboard */
+#gameImg {
+    height: 400px;
+    width: 100%;
+    background-image: url(/assets/images/spockhero3.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+
+
 }
