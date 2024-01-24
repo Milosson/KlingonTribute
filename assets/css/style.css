@@ -74,10 +74,7 @@ button:active {
 #gameImg {
     height: 400px;
     width: 100%;
-    background-image: url(/assets/images/spockhero3.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background: url("../images/spockhero3.png") no-repeat center/contain;
     position: relative;
 }
 
@@ -119,10 +116,7 @@ button:active {
 
 /* Image for infopage index.html */
 #ruleImg {
-    background-image: url(/assets/images/RockTest.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
+    background: url("../images/RockTest.png") no-repeat center center/contain; 
     width: 100%;
     height: 400px;
 }
