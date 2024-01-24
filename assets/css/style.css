@@ -17,6 +17,16 @@ button {
     border-radius: 5%;
     cursor: pointer;
     box-shadow: 10px 5px 15px darkslategray;
+    transition: background-color 0.3s ease, transofmr 0.2s ease, box-shadow 0.2s ease;
+}
+
+button:hover {
+    background-color: rgb(28, 130, 112);
+}
+
+button:active {
+    transform: translateY(2px);
+    box-shadow: 5px 2px 10px darkslategrey;
 }
 
 /* welcome text */
@@ -50,11 +60,14 @@ button {
     position: relative;
     margin: auto;
 }
+
+/* for the back-button in game.html */
+
 #theRuleBox {
     margin-left: 45vw;
     margin-top: 5vw;
     display: flex;
-    
+
 }
 
 /* Image for gameboard at Game.html */
@@ -94,11 +107,6 @@ button {
     box-shadow: 0 4px 8px slategrey;
 }
 
-/* */
-#theRuleBox {
-    display: flex;
-    position: relative;
-}
 
 /* */
 #container {
