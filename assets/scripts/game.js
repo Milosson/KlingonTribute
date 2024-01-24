@@ -65,7 +65,7 @@ function play(userChoice) {
         result.append(emoji);
 
         // Player wins based on game rules
-    } else if (userChoice in rules && computerChoice in rules[choices]) {
+    } else if (userChoice in rules && computerChoice in rules[userChoice]) {
         result.textContent = "You win!";
         message.textContent = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer chose ${computerChoice} ${emojiMap[computerChoice]}. ${userChoice} ${rules[userChoice][computerChoice]} ${computerChoice}.`;
         playerScore++;
@@ -104,8 +104,15 @@ function endGame() {
     // Create the content for the result popup.
     let popupContent = ` <h2>Game Over!</h2>`;
 
+    // Get choices made in the round
+    let userChoice;
+    let computerChoice;
+
     // Iterate through each round and display details
     for (let i = 1; i <= totalRounds; i++) {
+        userChoice = choices[i - 1];
+        computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
         let roundWinner;
         if (i <= playerScore) {
             roundWinner = 'Player';
@@ -114,25 +121,22 @@ function endGame() {
         } else {
             roundWinner = "It's a tie!"
         }
-          // Get choices made in the round
-    let userChoice = choices[i - 1];
-    let computerChoice = choices[Math.floor(Math.random() * choices.length)];
     }
-   
+
 
     // Determine the emoji for roundWinner
     let roundWinnerEmoji;
     if (roundWinner === 'Player') {
         roundWinnerEmoji = emojiMap[userChoice]; // Use the emoji chosen by the player
-    } else if (roundWinner = 'Computer') {
+    } else if (roundWinner === 'Computer') {
         roundWinnerEmoji = emojiMap[computerChoice]; // Use the emoji chosen by the computer
     } else {
         roundWinnerEmoji = '\uD83D\uDC54'; // Tie-emoji assuming it's a 'tie'
     }
 
     // Create the content for each round
-    popupContent += 
-    `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
+    popupContent +=
+        `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
     - Computer chose ${emojiMap[computerScore]} 
     - Winner is: ${roundWinner} ${roundWinnerEmoji}</p>`;
 }
@@ -167,11 +171,11 @@ function restartGame() {
         // Display the message or perform any other actions needed for the restart
         alert('Game restarted!');
     }
-// Reset game variables
-gameOver = false;
-// clear the result and message elements
-result.textContent = '';
-message.textContent = '';
+    // Reset game variables
+    gameOver = false;
+    // clear the result and message elements
+    result.textContent = '';
+    message.textContent = '';
 
 }
 
