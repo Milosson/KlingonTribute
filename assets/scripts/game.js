@@ -142,6 +142,18 @@ gameResultContainer.innerHTML = popupContent;
 // Display the gameResultContainer
 gameResultContainer.style.display = 'flex'
 
+// Reset the score and total rounds for new game.
+playerScore = 0;
+computerScore = 0;
+totalRounds = 0;
+
+// function restartGame 
+function restartGame() {
+    // Hide the gameResultContainer
+    document.getElementById('gameResultContainer').style.display = 'none';
+
+
+}
 
 
 
