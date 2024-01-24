@@ -113,7 +113,7 @@ let userChoice;
 let computerChoice;
 
     // Iterate through each round and display details
-    for (let i = 1; i <= totalRounds; i++) {
+    for (i = 1; i <= totalRounds; i++) {
         userChoice = choices[i - 1];
         computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
@@ -166,26 +166,24 @@ function restartGame() {
     // Hide the gameResultContainer
     document.getElementById('gameResultContainer').style.display = 'none';
 
+    //Reset totalRounds to 0 
+    totalRounds = 0;
+
     // Check if the game is not over before reset 
     if (!gameOver) {
-        // Clear the result and message elements
-        result.textContent = '';
-        message.textContent = '';
-
-        totalRounds = 0;
-        playerScore = 0;
-        computerScore = 0;
-
-        // Update the score
-        updateScoreBoard();
+     
         // Display the message or perform any other actions needed for the restart
         alert('Game restarted!');
     }
     // Reset game variables
     gameOver = false;
+    playerScore = 0;
+    computerScore = 0;
     // clear the result and message elements
     result.textContent = '';
     message.textContent = '';
+    // update the score
+    updateScoreBoard();
 
 }
 
