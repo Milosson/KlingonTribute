@@ -104,16 +104,19 @@ function endGame() {
     // Create the content for the result popup.
     let popupContent = ` <h2>Game Over!</h2>`;
 
-    // Get choices made in the round
-    let userChoice;
-    let computerChoice;
+// Declare roundWinner - correct after debug.
+let roundWinner;
+//Declaring i outside loop - corrected after debug.
+let i;
+//Declaring userChoice and computerChoice outside the loop - corrected after debug.
+let userChoice;
+let computerChoice;
 
     // Iterate through each round and display details
     for (let i = 1; i <= totalRounds; i++) {
         userChoice = choices[i - 1];
         computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
-        let roundWinner;
         if (i <= playerScore) {
             roundWinner = 'Player';
         } else if (i <= computerScore) {
@@ -122,7 +125,6 @@ function endGame() {
             roundWinner = "It's a tie!"
         }
     }
-
 
     // Determine the emoji for roundWinner
     let roundWinnerEmoji;
@@ -134,17 +136,25 @@ function endGame() {
         roundWinnerEmoji = '\uD83D\uDC54'; // Tie-emoji assuming it's a 'tie'
     }
 
-    // Create the content for each round
+    // Create the content for each round.
     popupContent +=
         `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
-    - Computer chose ${emojiMap[computerScore]} 
-    - Winner is: ${roundWinner} ${roundWinnerEmoji}</p>`;
+    - Computer chose ${emojiMap[computerChoice]} 
+    - Winner is: ${roundWinner} ${roundWinnerEmoji}</p>
+    `;
+// Add the overall winner and Play again button.
+popupContent += ` 
+<p>The winner is: ${winner} with: ${playerScore} vs ${computerScore}</p>
+<button onclick="restartGame()">Play Again</button>
+`;
+
+    // Set innerHTML of gameResultContainer
+    gameResultContainer.innerHTML = popupContent;
+// Display the gameResultContainer
+gameResultContainer.style.display = 'flex';
+
 }
 
-// Set innerHTML of gameResultContainer
-gameResultContainer.innerHTML = popupContent;
-// Display the gameResultContainer
-gameResultContainer.style.display = 'flex'
 
 // Reset the score and total rounds for new game.
 playerScore = 0;
