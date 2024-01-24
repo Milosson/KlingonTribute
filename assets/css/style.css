@@ -50,6 +50,12 @@ button {
     position: relative;
     margin: auto;
 }
+#theRuleBox {
+    margin-left: 45vw;
+    margin-top: 5vw;
+    display: flex;
+    
+}
 
 /* Image for gameboard at Game.html */
 #gameImg {

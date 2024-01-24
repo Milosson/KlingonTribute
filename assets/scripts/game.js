@@ -104,18 +104,15 @@ function endGame() {
     // Create the content for the result popup.
     let popupContent = ` <h2>Game Over!</h2>`;
 
-// Declare roundWinner - correct after debug.
-let roundWinner;
-//Declaring i outside loop - corrected after debug.
-let i;
-//Declaring userChoice and computerChoice outside the loop - corrected after debug.
-let userChoice;
-let computerChoice;
-
+    // Declare roundWinner - correct after debug.
+    let roundWinner;
+    //Declaring i outside loop - corrected after debug.
+    let i;
+    //Declaring userChoice and computerChoice outside the loop - corrected after debug.
+    let userChoice;
+    let computerChoice;
     // Iterate through each round and display details
     for (i = 1; i <= totalRounds; i++) {
-        userChoice = choices[i - 1];
-        computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
         if (i <= playerScore) {
             roundWinner = 'Player';
@@ -124,42 +121,47 @@ let computerChoice;
         } else {
             roundWinner = "It's a tie!"
         }
-    }
 
-    // Determine the emoji for roundWinner
-    let roundWinnerEmoji;
-    if (roundWinner === 'Player') {
-        roundWinnerEmoji = emojiMap[userChoice]; // Use the emoji chosen by the player
-    } else if (roundWinner === 'Computer') {
-        roundWinnerEmoji = emojiMap[computerChoice]; // Use the emoji chosen by the computer
-    } else {
-        roundWinnerEmoji = '\uD83D\uDC54'; // Tie-emoji assuming it's a 'tie'
-    }
+        userChoice = userChoice = choices[i - 1];
+        computerChoice = computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
-    // Create the content for each round.
-    popupContent +=
-        `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
+        // Determine the emoji for roundWinner
+        let roundWinnerEmoji;
+        if (roundWinner === 'Player') {
+            roundWinnerEmoji = emojiMap[userChoice]; // Use the emoji chosen by the player
+        } else if (roundWinner === 'Computer') {
+            roundWinnerEmoji = emojiMap[computerChoice]; // Use the emoji chosen by the computer
+        } else {
+            roundWinnerEmoji = '\uD83D\uDC54'; // Tie-emoji assuming it's a 'tie'
+        }
+
+        // Append the content for each round.
+        popupContent +=
+            `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
     - Computer chose ${emojiMap[computerChoice]} 
     - Winner is: ${roundWinner} ${roundWinnerEmoji}</p>
     `;
-// Add the overall winner and Play again button.
-popupContent += ` 
+    }
+
+    // Add the overall winner and Play again button.
+    popupContent += ` 
 <p>The winner is: ${winner} with: ${playerScore} vs ${computerScore}</p>
 <button onclick="restartGame()">Play Again</button>
 `;
 
     // Set innerHTML of gameResultContainer
     gameResultContainer.innerHTML = popupContent;
-// Display the gameResultContainer
-gameResultContainer.style.display = 'flex';
+    // Display the gameResultContainer
+    gameResultContainer.style.display = 'flex';
 
+
+
+    // Reset the score and total rounds for new game.
+    playerScore = 0;
+    computerScore = 0;
+    totalRounds = 0;
 }
 
-
-// Reset the score and total rounds for new game.
-playerScore = 0;
-computerScore = 0;
-totalRounds = 0;
 
 // function restartGame 
 function restartGame() {
@@ -171,7 +173,7 @@ function restartGame() {
 
     // Check if the game is not over before reset 
     if (!gameOver) {
-     
+
         // Display the message or perform any other actions needed for the restart
         alert('Game restarted!');
     }
