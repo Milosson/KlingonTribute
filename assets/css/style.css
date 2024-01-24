@@ -85,6 +85,7 @@ button {
     background-color: wheat;
     text-align: center;
     flex-direction: column;
+    box-shadow: 0 4px 8px slategrey;
 }
 
 /* */
@@ -132,4 +133,21 @@ button {
     width: 100%;
     max-width: 80vw;
     max-height: 80vh;
+}
+
+#choice {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    color: green;
+    background-color: darkslategrey;
+    cursor: pointer;
+    padding: 1%;
+}
+
+li {
+    justify-content: center;
+    display: flex;
+    font-style: oblique;
+    font-size: 25px;
 }

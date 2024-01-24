@@ -152,6 +152,26 @@ function restartGame() {
     // Hide the gameResultContainer
     document.getElementById('gameResultContainer').style.display = 'none';
 
+    // Check if the game is not over before reset 
+    if (!gameOver) {
+        // Clear the result and message elements
+        result.textContent = '';
+        message.textContent = '';
+
+        totalRounds = 0;
+        playerScore = 0;
+        computerScore = 0;
+
+        // Update the score
+        updateScoreBoard();
+        // Display the message or perform any other actions needed for the restart
+        alert('Game restarted!');
+    }
+// Reset game variables
+gameOver = false;
+// clear the result and message elements
+result.textContent = '';
+message.textContent = '';
 
 }
 
