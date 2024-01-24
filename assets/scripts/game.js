@@ -133,14 +133,14 @@ function endGame() {
     // Create the content for each round
     popupContent += 
     `<p>Round ${i}: You chose ${emojiMap[userChoice]} 
-    - Computer chose ${emojiMap[computerChoice]} 
+    - Computer chose ${emojiMap[computerScore]} 
     - Winner is: ${roundWinner} ${roundWinnerEmoji}</p>`;
 }
 
 // Set innerHTML of gameResultContainer
 gameResultContainer.innerHTML = popupContent;
 // Display the gameResultContainer
-gameResultContainer.style.display = 'flex';
+gameResultContainer.style.display = 'flex'
 
 
 
