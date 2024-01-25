@@ -122,9 +122,10 @@ function endGame() {
         } else {
             roundWinner = "It's a tie!";
         }
-
-        userChoice = userChoice = choices[i - 1];
-        computerChoice = computerChoice = choices[Math.floor(Math.random() * choices.length)];
+        // Users choice based on index from choices.   
+        userChoice = choices[i - 1];
+        // Computers choice randomized from the choices.
+        computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
         // Determine the emoji for roundWinner
         let roundWinnerEmoji;
@@ -154,8 +155,6 @@ function endGame() {
     gameResultContainer.innerHTML = popupContent;
     // Display the gameResultContainer
     gameResultContainer.style.display = 'flex';
-
-
 
     // Reset the score and total rounds for new game.
     playerScore = 0;

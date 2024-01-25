@@ -8,7 +8,7 @@ body {
     
 }
 
-/* design for the buttons with some styling for UI-friendliness */
+/* General design for the buttons, with hover effects for user interactive experience */
 button {
     padding: 3%;
     margin: 3%;
@@ -39,7 +39,8 @@ button:active {
     align-items: center;
     position: relative;
     z-index: 99;
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 
 /* game info text for indexhtml and klingonhtml */
@@ -57,27 +58,22 @@ button:active {
 #klingonTransTxtBox > p {
 
     color:  rgb(215 233 230);
+    width: 80%;
+    margin: auto;
 }
 
 /* for the button-divs -StartGame -KlingonTranslatePage */
 #toTheGameBox,
-#klingonTransBox {
+#klingonTransBox,
+#theRuleBox {
     display: flex;
     position: relative;
-    margin: auto;
-}
-
-/* for the back-button in game.html */
-
-#theRuleBox {
-    margin-left: 46vw;
-    display: flex;
-
+    margin: 0 auto;
 }
 
 /* Image for gameboard at Game.html */
 #gameImg {
-    height: 400px;
+    height: 350px;
     width: 100%;
     background: url("../images/spockgamehero.avif") no-repeat center/contain;
     position: relative;
@@ -93,7 +89,6 @@ button:active {
 }
 
 /* Userscore and Computerscore */
-
 #playerScore,
 #computerScore {
     font-size: 20px;
@@ -107,13 +102,10 @@ button:active {
     border-radius: 8px;
     text-align: center;
     background-color: #ADEFD1FF;
-    text-align: center;
     flex-direction: column;
-    width: 80%;
-    margin: auto;
-  
+    width: 75%;
+    margin: 0 auto;
 }
-
 
 /* Container for onclick buttons */
 #container {
@@ -128,12 +120,11 @@ button:active {
 #ruleImg {
     background: url("../images/RockTest.png") no-repeat center center/contain;
     width: 100%;
-    height: 400px;
+    height: 350px;
     margin-top: 1%;
 }
 
 /* Design for gameResultContainer */
-
 #gameResultContainer {
     display: none;
     /* Hide by default */
@@ -149,23 +140,21 @@ button:active {
     left: 50%;
     top: 30%;
     transform: translate(-50%, -50%);
-    width: 100%;
+    width: 80%;
     max-width: 80vw;
     background-color: #EEA47FFF;
     margin-top: 0.5vw;
 }
 
-
-#choice {
+/* Desing for the choice buttons */
+.choice {
     width: 100px;
     height: 100px;
     margin: 20px;
-    color: green;
-    background-color: darkslategrey;
+    background-color: #adefd1;
     cursor: pointer;
     padding: 1%;
     color: black;
- 
 }
 
 li {
@@ -180,11 +169,8 @@ p {
     text-align: center;
     color: #114e44;
     font-size: 20px;
-
 }
 
 #scoreboard h2 {
-    margin-bottom: 10px;
-    
-    
+    margin-bottom: 10px; 
 }
