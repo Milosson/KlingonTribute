@@ -2,7 +2,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background-color: #03131A;
+    background-color: #00203FFF;
     margin: 0;
     min-height: 100vh;
     
@@ -12,13 +12,14 @@ body {
 button {
     padding: 3%;
     margin: 3%;
-    background-color: rgb(17, 78, 68);
-    color:  rgb(215 233 230);
+    background-color: #ADEFD1FF;
+    color:  black;
     border: none;
     border-radius: 5%;
     cursor: pointer;
     box-shadow: 10px 5px 15px darkslategray;
     transition: background-color 0.3s ease, transofmr 0.2s ease, box-shadow 0.2s ease;
+    font-weight: 300;
 }
 
 button:hover {
@@ -105,9 +106,11 @@ button:active {
     display: flex;
     border-radius: 8px;
     text-align: center;
-    background-color: #134d43;
+    background-color: #ADEFD1FF;
     text-align: center;
     flex-direction: column;
+    width: 80%;
+    margin: auto;
   
 }
 
@@ -149,7 +152,8 @@ button:active {
     width: 100%;
     max-width: 80vw;
     max-height: 80vh;
-    background-color: wheat;
+    background-color: #EEA47FFF;
+    margin-top: 0.5vw;
 }
 
 
@@ -161,6 +165,7 @@ button:active {
     background-color: darkslategrey;
     cursor: pointer;
     padding: 1%;
+    color: black;
  
 }
 
