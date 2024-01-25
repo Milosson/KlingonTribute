@@ -90,8 +90,17 @@ If you'd like to contribute to the project, please follow these steps:
 4. Push your changes fo your fork.
 5. Create a pull request.
 
-## Media and Credits
+## Media and Credits / Acknowledgements
 
 Special thanks and recognition to: 
  * My awesome mentor **Gareth McGirr** [GitHub](https://github.com/Gareth-McGirr).
- 
+
+## Gratitudes 
+
+## License Information
+
+This Klingon Tribute game is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to explore, modify, and share the game as long as you adhere to the terms of the MIT License or, if you are a member of the Klingon family 🖖👽
+
+## Conclusion
+
+Thaaaaaaanks
