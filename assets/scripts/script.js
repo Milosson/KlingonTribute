@@ -9,7 +9,7 @@ let rules = {
     scissors: { paper: "cuts", lizard: "decapitates" },
     spock: { rock: "vaporizes", scissors: "smashes" },
     lizard: { paper: "eats", spock: "poisons" },
-}
+};
 
 // Variable to keep track of total rounds. 
 let totalRounds = 0;
@@ -24,10 +24,10 @@ let computerScore = 0;
 // Map for choices to emojis - This emoji map was inspired by Hackernoon.com! 
 // I prefer to use the unicode for cross-platform compatibility, readability and maintanability. 
 const emojiMap = {
-    rock: '\uD83D\uDDFF', // 🗿 
+    rock: '\uD83D\uDDFF', // 🗿
     paper: '\uD83D\uDCC3', // 📃
     scissors: '\u2702\uFE0F', // ✂️
-    spock: '\uD83D\uDC7D', // 👽  
+    spock: '\uD83D\uDC7D', // 👽
     lizard: '\uD83E\uDD8E', // 🦎
 }
 
@@ -102,7 +102,7 @@ function endGame() {
         winner = "It's a tie!";
     }
     // Create the content for the result popup.
-    let popupContent = ` <h2>Game Over!</h2>`;
+    let popupContent = `<h2>Game Over!</h2>`;
 
     // Declare roundWinner - correct after debug.
     let roundWinner;
@@ -111,6 +111,7 @@ function endGame() {
     //Declaring userChoice and computerChoice outside the loop - corrected after debug.
     let userChoice;
     let computerChoice;
+
     // Iterate through each round and display details
     for (i = 1; i <= totalRounds; i++) {
 
@@ -119,7 +120,7 @@ function endGame() {
         } else if (i <= computerScore) {
             roundWinner = 'Computer';
         } else {
-            roundWinner = "It's a tie!"
+            roundWinner = "It's a tie!";
         }
 
         userChoice = userChoice = choices[i - 1];
