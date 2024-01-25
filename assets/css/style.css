@@ -18,7 +18,7 @@ button {
     border-radius: 5%;
     cursor: pointer;
     box-shadow: 10px 5px 15px darkslategray;
-    transition: background-color 0.3s ease, transofmr 0.2s ease, box-shadow 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
     font-weight: 300;
 }
 
@@ -151,7 +151,6 @@ button:active {
     transform: translate(-50%, -50%);
     width: 100%;
     max-width: 80vw;
-    max-height: 80vh;
     background-color: #EEA47FFF;
     margin-top: 0.5vw;
 }

@@ -29,7 +29,7 @@ const emojiMap = {
     scissors: '\u2702\uFE0F', // ✂️
     spock: '\uD83D\uDC7D', // 👽
     lizard: '\uD83E\uDD8E', // 🦎
-}
+};
 
 // Elements to display result.
 let result = document.getElementById('result');
@@ -71,7 +71,7 @@ function play(userChoice) {
         playerScore++;
         // Player lose based on game rules
     } else {
-        result.textContent = "You lose!"
+        result.textContent = "You lose!";
         message.textContent = `You chose ${userChoice} ${emojiMap[userChoice]} and the computer choose ${computerChoice} ${emojiMap[computerChoice]}. ${computerChoice} ${rules[computerChoice][userChoice]} ${userChoice}.`;
         computerScore++;
     }
