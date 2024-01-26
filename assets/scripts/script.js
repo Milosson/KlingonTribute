@@ -2,6 +2,7 @@
 let choices = ["rock", "paper", "scissors", "spock", "lizard"];
 
 // Rules for the game - This way of object mapping was inspired by 'Code Therapy @ YouTube' https://www.youtube.com/watch?v=wT1pwM7hRtQ&ab_channel=CodingTherapy
+// And also ThatSoftwareDude.com - https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript
 // I found this way of object literal to be easier for me rather than switch case.
 let rules = {
     rock: { scissors: "crushes", lizard: "crushes" },
