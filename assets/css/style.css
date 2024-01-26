@@ -75,7 +75,7 @@ button:active {
 #gameImg {
     height: 350px;
     width: 100%;
-    background: url("../images/spockgamehero.avif") no-repeat center/contain;
+    background: url("../images/nyhero.avif") no-repeat center/contain;
     position: relative;
     margin-top: 1%;
 }

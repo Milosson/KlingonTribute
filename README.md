@@ -71,15 +71,6 @@
 
 For any issues or inquiries, please contact [ milorazzaz@protonmail.com ] 🖖
 
-## Project Roadmap 
-- *Phase 1:* asdfadf
-- *Phase 2:* Adding basic structure for the HTML with basic CSS styling to get my vision in place.
-- *Phase 3:* asdfasdfa
-- *Phase 4:* asdf
-- *Phase 5:* asdf
-
-## Project Status
-
 ## Contribution Guidelines
 
 If you'd like to contribute to the project, please follow these steps:
@@ -92,10 +83,29 @@ If you'd like to contribute to the project, please follow these steps:
 
 ## Media and Credits / Acknowledgements
 
-Special thanks and recognition to: 
- * My awesome mentor **Gareth McGirr** [GitHub](https://github.com/Gareth-McGirr).
+This project was inspired originally from the TV series - Big Bang Theory, which I believe was the first edition of this game ever presented. 
 
-## Gratitudes 
+When it was time to start planning my second project for school including HTML, CSS and JavaScript the choice to make this game was just an easy call. 
+
+With the help and inspiration of others throughout Stackoverflow and other sources such as YouTube and CodeInstitutes (my current school), I developed my own way of creating this beloved game with a touch of humor included as i translated the game description into Klingon. I feel like I've created my own version as I wanted it.
+
+### Code
+ - Object mapping and general code was inspired and used from [Coding Therapy](https://www.youtube.com/watch?v=wT1pwM7hRtQ&ab_channel=CodingTherapy)
+ - Inspired and code snippets used from [Web Dev Simplified](https://www.youtube.com/watch?v=1yS-JV4fWqY&ab_channel=WebDevSimplified)
+ - Inspiration and guideline [Hackernoon](https://hackernoon.com/how-to-create-rock-paper-scissors-spock-lizard-in-javascript-991k36hy) 
+ - Inspiration and guideline [Sakil Mahmud @ medium.com ](https://medium.com/@sakilmahmud543/build-sheldons-chaotic-rock-paper-scissors-lizard-spock-with-nodejs-923d6cb9f5dc)
+
+### Images 
+ - [Pinterest](https://www.pinterest.se/pin/40532465370761714/) Gameboard Image
+ - [Pinterest](https://www.pinterest.se/pin/240450067597702718/) Welcome Image 
+
+
+Special thanks and recognition to: 
+ * My awesome mentor **Gareth McGirr** [GitHub](https://github.com/Gareth-McGirr), His project and the way I choose to create i.e object map was inspired through his project mainly through his source [TheSoftwareDude](https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript). This was combined all together with above mentioned sources.
+
+### Gratitude
+### *A heartfelt shout-out to my mentor, [Gareth McGirr](https://github.com/Gareth-McGirr), and my school, [CodeInsitute](https://codeinstitute.net/), for providig me with the knowledge to bring this project to life. Their tutorials have been a key factor in shaping this project, and I am grateful for their support.*
+
 
 ## License Information
 
@@ -103,4 +113,5 @@ This Klingon Tribute game is licensed under the [MIT License](https://opensource
 
 ## Conclusion
 
-Thaaaaaaanks
+Thank you for visiting Klingon Tribute - Rock Paper Scissors Spock Lizard, a classic game with a twitst to it. 
+# Vulcan Salute 🖖👽
