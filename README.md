@@ -1,21 +1,33 @@
 # Klingon Tribute - Rock Paper Scissors Spock Lizard. 🖖
 
 ## Welcome to Qo'noS game, where the classic Rock Paper Scissors game gets a Qo'noS twist! Engage in epic battles with familiar faces like Rock, Paper, Scissors, and brace yourself for the unexpected duo - Spock and Lizard. Are you ready to unleash the quirky chaos?
-![Game Image Mockup](/assets/images/gameresponsimgnew.JPG) 
+![Game Image Mockup](/assets/images/newfirstmockup.JPG) 
 
 [Game Live Link URL](https://milosson.github.io/KlingonTribute/game.html)
 
 ## Table of Contents
 * [Features](#Features)
+* [Future Features](#future-features)
 * [Technologies Used](#Technologies-used)
 * [Requirements](#Requirements)
 * [Testing](#Testing)
-    - [- *HTML*](#HTML)
-    - [- *CSS*](#CSS)
-    - [- *JavaScript*](#JavaScript)
+    - [*HTML*](#HTML)
+    - [*CSS*](#CSS)
+    - [*JavaScript*](#JavaScript)
+    - [*LightHouse Report*](#lighthouse-report)
+    - [*Manual testing*](#manual-gameplay-test-to-ensure-funcunality-and-quality)
 * [Deployment](#Deployment)
 * [Installation Instructions](#installation-instructions)
-* [Usage Instructions](#usage-instructions)
+* [Support Information](#support-information)
+* [Media and Credits/Acknowledgements](#media-and-credits--acknowledgements)
+    - [*CODE*](#code)
+    - [*IMAGES*](#images)
+    - [*KLINGON TRANSLATION*](#klingon-translated-welcome-text--game-description)
+    - [*RECOGNITION*](#special-thanks-and-recognition-to)
+* [Gratitude](#gratitude)
+* [License](#license-information)
+* [Conclusion](#conclusion)    
+
 
 ## Features
 - Gameplay and Information: This section provides players with essential information on how to start and play the game. By clicking the "START GAME" button on the landing page, players can choose their hand shape from the available options: Rock, Paper, Scissors, Spock, and Lizard. 
@@ -28,26 +40,67 @@
 
 - Game Result: After playing 5 rounds, the game concludes with a detailed result. Players can discover the overall winner and relive the exciting moments of each round. This feature adds a sense of closure and competition to the gaming experience.![End Game Score Result ](/assets/images/endgamescoreboardmockup.JPG)
 
+## Future features 
+
+ #### Moving forward, I aim to make following adjustments:
+- Transition from using onclick functions in game.html to eventListeners in script.js.
+- Implement media queries to ensure a seamless mobile-first experience, particularly addressing compability issues within the 280px - 425px range. This is crucial, as the current flex properties may encounter challenges on a variety of devices within this range.
+- Incorporate sound effects triggered upon activation of the onclick events to provide immersive user experience during gameplay.
+- Re-structure the buttons for smaller devices, adding JS function to dynamically remove certain elements, optimizing the layout for smaller devices.
+- Reviewing the color-scheme to optimize the best user experience and meet the requirements for a higher LightHouse score.
+
 
 ## Technologies Used
-- HTML5
+- HTML5 
+  - *The structure of the website was developed using HTML5 as the main language.*
 - CSS3
+  - *The website was styled using CSS.*
 - JavaScript
+  - *The game play logic was created using JavaScript and some other HTML attributes as popups.*
+- Visual Studio Code 
+  - *Mainly used VSC locally with extension for live preview when setting up and testing my way going forward with the project.*
+- GitHub
+  - *Source code is hosted at GitHub and deployed through Git Pages.*
+- GitPod 
+  - *Source for codespace(IDE) with commit and push when developing the website.*
 
 ## Requirements
 - Web Browser (Recommended: Chrome, Firefox, Safari)
 
 ## Testing
 #### - *HTML* 
-* Validated through the official [W3C Validator]()
+* Validated through the official [W3C Validator](https://validator.w3.org/)
+  - ![W3C HTML RESULT INDEX.HTML](/assets/images/w3chtmlindex.JPG)
+  - ![W3C HTML RESULT KLINGON.HTML](/assets/images/w3chtmlklingon.JPG)
+  - ![W3C HTML RESULT GAME.HTML](/assets/images/w3chtmlgame.JPG)
+     ##### *As presented all the documents completed the check without any errors or warnings.*
+
 #### - *CSS* 
-* Validated through the official W3C CSS Validator - Click W3C Image for results. [![Result Link Click W3C](http://jigsaw.w3.org/css-validator/images/vcss)](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmilosson.github.io%2FKlingonTribute%2Findex.html)
+* Validated through the official W3C CSS Validator without any errors or warnings - Click W3C Image for results. [![Result Link Click W3C](http://jigsaw.w3.org/css-validator/images/vcss)](http://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmilosson.github.io%2FKlingonTribute%2Findex.html) 
+
 #### - *JAVASCRIPT*
 * No errors were found when passing through [JSHint Validator](https://jshint.com/)
-- Two warnings regarding unused variables play and restartGame but these functions are called on with onclick function in HTML.
+- Two warnings regarding unused variables play and restartGame but these functions are called on with onclick function in game.html.
 
 ![JavaScript Validator Result](/assets/images/JSHintValidator.JPG)
 
+#### Lighthouse Report
+ * Lighthouse report generated an overall awesome result, with accessibility scoring the lowest at 89, The reason for this is the insufficient contrast between the scoreboard, buttons, etc., and the background-color.
+![Lighthouse Report](/assets/images/Lighthousereport.JPG)
+
+### Manual gameplay test to ensure functionality and quality.
+
+     Rock loses to Paper
+![Rock beaten by paper](/assets/images/testrockbeatpaper.JPG)
+
+     Rock beats Scissors
+![Rock beats Scissors](/assets/images/testrockbeatscissors.JPG)
+
+     Paper disapproves Spock
+![Paper disapproves Spock](/assets/images/testpaperdisspock.JPG)     
+
+     Paper resulted in Tie
+![Paper resulted in Tie](/assets/images/testpaperresulttie.JPG)     
 
 ## Deployment
 #### The site was deployed to GitHub pages. The steps to deploy are as follows:
@@ -64,8 +117,6 @@
     3. Launch the website by opening the 'index.html' file in a web browser.
 
  ## The live link can be found here - [LIVE LINK](<https://milosson.github.io/KlingonTribute/index.html>)
-
-## Usage Instructions
 
 ## Support Information
 
@@ -85,7 +136,7 @@ If you'd like to contribute to the project, please follow these steps:
 
 This project was inspired originally from the TV series - Big Bang Theory, which I believe was the first edition of this game ever presented. 
 
-When it was time to start planning my second project for school including HTML, CSS and JavaScript the choice to make this game was just an easy call. 
+When it was time to start planning my second project for school including HTML, CSS and JavaScript the choice to make this game was just an easy call. (Also one of the suggestions from school as a first project in JavaScript).
 
 With the help and inspiration of others throughout Stackoverflow and other sources such as YouTube and CodeInstitutes (my current school), I developed my own way of creating this beloved game with a touch of humor included as i translated the game description into Klingon. I feel like I've created my own version as I wanted it.
 
@@ -99,8 +150,12 @@ With the help and inspiration of others throughout Stackoverflow and other sourc
  - [Pinterest](https://www.pinterest.se/pin/40532465370761714/) Gameboard Image
  - [Pinterest](https://www.pinterest.se/pin/240450067597702718/) Welcome Image 
 
+ ### Klingon translated welcome text / game description
+ - [Translater](https://www.translator.eu/english/klingon/translation/) Used various translation websites to translate the welcome text. Conclusively, results varied across different platforms, and when reverting the translated text back to its original English form, the outcome were distinctly different. 
+ Let's just hope the inhabitants of Qo'noS won't take offense and interpret this genuine attempt to earn universal respect and understanding! 🖖
 
-Special thanks and recognition to: 
+
+### Special thanks and recognition to: 
  * My awesome mentor **Gareth McGirr** [GitHub](https://github.com/Gareth-McGirr), His project and the way I choose to create i.e object map was inspired through his project mainly through his source [TheSoftwareDude](https://www.thatsoftwaredude.com/content/6196/coding-a-card-deck-in-javascript). This was combined all together with above mentioned sources.
 
 ### Gratitude

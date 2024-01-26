@@ -1,7 +1,7 @@
 // Create an array with possbile choices 
 let choices = ["rock", "paper", "scissors", "spock", "lizard"];
 
-// Rules for the game - This way of object mapping was inspired by Hackernoon.com and Medium.com!
+// Rules for the game - This way of object mapping was inspired by 'Code Therapy @ YouTube' 
 // I found this way of object literal to be easier for me rather than switch case.
 let rules = {
     rock: { scissors: "crushes", lizard: "crushes" },
