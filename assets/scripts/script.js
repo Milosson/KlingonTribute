@@ -1,7 +1,7 @@
 // Create an array with possbile choices 
 let choices = ["rock", "paper", "scissors", "spock", "lizard"];
 
-// Rules for the game - This way of object mapping was inspired by 'Code Therapy @ YouTube' 
+// Rules for the game - This way of object mapping was inspired by 'Code Therapy @ YouTube' https://www.youtube.com/watch?v=wT1pwM7hRtQ&ab_channel=CodingTherapy
 // I found this way of object literal to be easier for me rather than switch case.
 let rules = {
     rock: { scissors: "crushes", lizard: "crushes" },
@@ -21,7 +21,7 @@ let gameOver = false;
 let playerScore = 0;
 let computerScore = 0;
 
-// Map for choices to emojis - This emoji map was inspired by Hackernoon.com! 
+// Map for choices to emojis - This emoji map was inspired by Hackernoon.com https://hackernoon.com/how-to-create-rock-paper-scissors-spock-lizard-in-javascript-991k36hy
 // I prefer to use the unicode for cross-platform compatibility, readability and maintanability. 
 const emojiMap = {
     rock: '\uD83D\uDDFF', // 🗿

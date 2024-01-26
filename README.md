@@ -48,6 +48,7 @@
 - Incorporate sound effects triggered upon activation of the onclick events to provide immersive user experience during gameplay.
 - Re-structure the buttons for smaller devices, adding JS function to dynamically remove certain elements, optimizing the layout for smaller devices.
 - Reviewing the color-scheme to optimize the best user experience and meet the requirements for a higher LightHouse score.
+- Adress the issue where scoreboard fails to update  before the appearance of the gameResultContainer, resulting in a missed incrementation for the scoreboard. **Solution: Reordering the code to ensure that the updateScoreboard function is called before the gameResultContainer is set and displayed.** (Last minute discovery).
 
 
 ## Technologies Used
